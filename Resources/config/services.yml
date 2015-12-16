@@ -1,0 +1,5 @@
+services:
+    cscfa_cache_system_cache:
+        class: Cscfa\Bundle\CacheSystemBundle\Object\Cache
+        calls:
+            - [setArguments, [ "@kernel", "%cscfa_cache_system%" ]]
