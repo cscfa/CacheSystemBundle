@@ -1,5 +1,5 @@
 # CacheSystemBundle
-### Version 1.0.0-dev
+### Version 1.0.1-dev
 
 The cscfa caching system tool allow to store informations files into the application cache directory and automatically manage the out of date values.
 
@@ -21,6 +21,19 @@ class AppKernel extends Kernel
         [...]
     }
 }
+```
+
+#####Use manager
+
+The cache manager allow to process a cache storage by using a closure. It will automatically use cache if exist, or create it with the closure result.
+
+```
+// in controller
+
+	return new Response($this->get("cscfa_cache_system_manager")->process("id@key", function($controller, $name){
+		return $controller->renderView("AcmeDemoBundle:Default:index.html.twig", array("name"=>$name)); 
+	}, $this, $name));
+	
 ```
 
 #####Getting cache

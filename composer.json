@@ -1,13 +1,13 @@
 {
 	"name" : "cscfa/cache-system-bundle",
 	"description" : "The CacheSystemBundle allow to store informations files into the application cache directory and automatically manage the out of date values",
-	"version" : "1.0.0-dev",
+	"version" : "1.0.1-dev",
 	"type" : "library",
 	"keywords" : [
 		"cscfa",
 		"cache"
 	],
-	"time" : "2015-12-16",
+	"time" : "2015-12-17",
 	"license" : "MIT",
 	"authors" : [{
 			"name" : "Matthieu Vallance",

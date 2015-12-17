@@ -3,3 +3,7 @@ services:
         class: Cscfa\Bundle\CacheSystemBundle\Object\Cache
         calls:
             - [setArguments, [ "@kernel", "%cscfa_cache_system%" ]]
+    cscfa_cache_system_manager:
+        class: Cscfa\Bundle\CacheSystemBundle\Object\facade\CacheManager
+        calls:
+            - [setCache, [ "@cscfa_cache_system_cache" ]]
